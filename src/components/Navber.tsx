@@ -11,7 +11,7 @@ import {
   CodeBracketIcon
 } from '@heroicons/react/24/outline'
 import Link from 'next/link'
-
+import { useAuth } from '@/context/AuthContext'
 
 const navLinks = [
   { name: 'Home', href: '/' },
@@ -37,17 +37,13 @@ const navLinks = [
   { name: 'Pricing', href: '/pricing' }
 ]
 
-
-
 export default function Navbar () {
   const [isOpen, setIsOpen] = useState(false)
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null)
   const [scrolled, setScrolled] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
-
-
-
+  const { openAuthModal } = useAuth();
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10)
@@ -163,12 +159,12 @@ export default function Navbar () {
                 >
                   Sign In
                 </Link> */}
-                <Link
-                  href='/signin'
+                <button
+                  onClick={() => openAuthModal('login')}
                   className='px-4 py-2 text-gray-300 hover:text-[#00D1FF] transition-colors'
                 >
                   Sign In
-                </Link>
+                </button>
                 <Link
                   href='/register'
                   className='bg-[#00D1FF] hover:bg-[#00b8e0] px-4 py-2 rounded-md font-medium text-gray-900 transition-colors'
