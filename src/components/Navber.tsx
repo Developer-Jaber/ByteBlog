@@ -12,6 +12,7 @@ import {
 } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 
+
 const navLinks = [
   { name: 'Home', href: '/' },
   {
@@ -36,12 +37,16 @@ const navLinks = [
   { name: 'Pricing', href: '/pricing' }
 ]
 
+
+
 export default function Navbar () {
   const [isOpen, setIsOpen] = useState(false)
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null)
   const [scrolled, setScrolled] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
+
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -152,8 +157,14 @@ export default function Navbar () {
               </button>
 
               <div className='hidden md:flex space-x-2'>
+                {/* <Link
+                  href='/signin'
+                  className='px-4 py-2 text-gray-300 hover:text-[#00D1FF] transition-colors'
+                >
+                  Sign In
+                </Link> */}
                 <Link
-                  href='/login'
+                  href='/signin'
                   className='px-4 py-2 text-gray-300 hover:text-[#00D1FF] transition-colors'
                 >
                   Sign In
@@ -240,7 +251,7 @@ export default function Navbar () {
 
                 <div className='space-y-3 pt-4 border-gray-800 border-t'>
                   <Link
-                    href='/login'
+                    href='/signin'
                     className='flex items-center py-2 text-gray-300 hover:text-[#00D1FF] transition-colors'
                     onClick={() => setIsOpen(false)}
                   >
