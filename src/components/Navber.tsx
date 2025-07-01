@@ -13,6 +13,7 @@ import {
 import Link from 'next/link'
 import { useAuth } from '@/context/AuthContext'
 
+
 const navLinks = [
   { name: 'Home', href: '/' },
   {
@@ -38,6 +39,7 @@ const navLinks = [
 ]
 
 export default function Navbar () {
+
   const [isOpen, setIsOpen] = useState(false)
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null)
   const [scrolled, setScrolled] = useState(false)
@@ -165,6 +167,7 @@ export default function Navbar () {
                 >
                   Sign In
                 </button>
+
                 <Link
                   href='/register'
                   className='bg-[#00D1FF] hover:bg-[#00b8e0] px-4 py-2 rounded-md font-medium text-gray-900 transition-colors'

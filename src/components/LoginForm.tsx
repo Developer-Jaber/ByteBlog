@@ -10,12 +10,11 @@ import {
 import React, { useState } from 'react'
 
 export default function LoginForm () {
-  const { authModal, closeAuthModal } = useAuth()
+  const {  closeAuthModal } = useAuth()
   const [showPassword, setShowPassword] = useState(false)
   const [formData, setFormData] = useState({
     email: '',
-    password: '',
-    name: ''
+    password: ''
   })
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [isLoading, setIsLoading] = useState(false)
@@ -36,10 +35,6 @@ export default function LoginForm () {
     if (!formData.password) newErrors.password = 'Password is required'
     else if (formData.password.length < 6)
       newErrors.password = 'Minimum 6 characters'
-
-    if (authModal === 'register' && !formData.name) {
-      newErrors.name = 'Name is required'
-    }
 
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
