@@ -20,7 +20,7 @@ const navLinks = [
     name: 'Features',
     href: '#',
     subLinks: [
-      { name: 'Writing Tools', href: '/features/writing' },
+      { name: 'Writing Tools', href: '/writing-tools' },
       { name: 'Analytics', href: '/features/analytics' },
       { name: 'Monetization', href: '/features/monetization' }
     ]
