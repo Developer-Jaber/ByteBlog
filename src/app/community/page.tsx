@@ -1,3 +1,4 @@
+'use client';
 import { UsersIcon, MessageSquareIcon, TrendingUpIcon, CalendarIcon, StarIcon } from 'lucide-react'
 import CommunityCard from '@/components/CommunityCard'
 import DiscussionCard from '@/components/DiscussionCard'

@@ -1,3 +1,4 @@
+'use client';
 import ToolCard from '@/components/ToolCard'
 import { NotebookIcon, SparklesIcon, Wand2Icon, BookOpenCheckIcon } from 'lucide-react'
 

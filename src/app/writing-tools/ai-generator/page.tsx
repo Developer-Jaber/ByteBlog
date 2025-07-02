@@ -1,3 +1,4 @@
+'use client';
 import { SparklesIcon } from 'lucide-react'
 
 export default function AIGeneratorPage() {
