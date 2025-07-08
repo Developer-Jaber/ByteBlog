@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import { 
-    ArrowRightIcon,
   BoltIcon,
   ChartBarIcon,
   GlobeAltIcon,
@@ -10,6 +9,7 @@ import {
   ShareIcon,
   SparklesIcon 
 } from '@heroicons/react/24/outline';
+import { ArrowRightIcon } from 'lucide-react';
 
 const features = [
   {
